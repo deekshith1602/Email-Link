@@ -10,8 +10,9 @@ body {
     margin: 0; padding: 0;
     font-family: 'Arial'  , 'sans-serif';
     display: flex;
-    justify-content: center;
+    justify-content: cetnter;
     align-items: center;
+    left:50%;
     height: 100vh;
     background-color: #f4f4f4;
 
@@ -65,10 +66,10 @@ var emailLink = encodeURIComponent(linkInput);
 
 // Construct the mail to link
 
-var mailtoLink = 'mailto:sigmadeekshith@gmail.com?subject=Link&body=' + email;
+var mailtoLink = 'mailto:sigmadeekshith@gmail.com?subject=Link&body=' + emailLink;
 
 // Open the default email client
-window.location.href = mailto(no subject);
+window.location.href = mailtoLink;
 }
 </script>
 
