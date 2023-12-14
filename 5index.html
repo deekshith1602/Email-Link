@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Link</title>
+    <style>
+
+body {
+    margin: 0; padding: 0;
+    font-family: 'Arial'  , 'sans-serif';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+
+}
+
+
+.email-container {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+#link-input {
+    width: 100%;
+    padding: 10px;
+    margin-right: 126px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#send-email-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-email-btn:hover {
+    background-color: #0056b3;
+}
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="email-container">
+        <input type="text" id="link-input" placeholder="Paste Youtube or Google Link...">
+        <button id="send-email-btn" onclick="sendEmail()">Send Mail</button>
+    </div>
+    
+<script>
+
+function sendEmail() {
+var linkInput = document.getElementById('link-input').value;
+var emailLink = encodeURIComponent(linkInput);
+
+// Construct the mail to link
+
+var mailtoLink = 'mailto:sigmadeekshith@gmail.com?subject=Link&body=' + emailLink;
+
+// Open the default email client
+window.location.href = mailtoLink;
+}
+</script>
+
+</body>
+</html>
