@@ -61,12 +61,12 @@ body {
 <script>
 
 function sendEmail() {
-var linkInput = document.getElementById('link-input').value;
-var emailLink = encodeURIComponent(linkInput);
+let linkInput = document.getElementById('link-input').value;
+let emailLink = encodeURIComponent(linkInput);
 
 // Construct the mail to link
 
-var mailtoLink = 'mailto:sigmadeekshith@gmail.com?subject=&body=' + emailLink;
+let mailtoLink = 'mailto:sigmadeekshith@gmail.com?subject=&body=' + emailLink;
 
 // Open the default email client
 window.location.href = mailtoLink;
